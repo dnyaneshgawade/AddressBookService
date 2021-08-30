@@ -99,3 +99,15 @@ select Type, count(FirstName) as NoOfAddressBelongsToType from AddressBook
 join AddressType 
 on AddressBook.TypeId=AddressType.TypeId
 group by Type
+
+
+
+--UC11- Ability to add person to both Friend and Family
+
+Insert into AddressBook(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email,TypeId)
+values
+('Saurabh','Patil','Magarpatta','Pune','Maharashtra',400011,9098989898,'saurabh@gmail.com',1),
+('Rutuja','Pai','Thane','Mumbai','Maharashtra',400001,9099999999,'rutuja@gmail.com',2)
+
+
+
