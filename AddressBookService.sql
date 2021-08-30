@@ -44,3 +44,9 @@ set City='Wasco' where FirstName='Onkar'
 
 delete from AddressBook where FirstName='Akshay'
 
+
+
+
+--UC6- Ability to Retrieve Person belonging to a City or State from the Address Book
+
+select * from AddressBook where City='Mumbai' or State='Maharashtra' order by FirstName
