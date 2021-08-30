@@ -37,3 +37,10 @@ values
 Update  AddressBook
 set City='Wasco' where FirstName='Onkar'
 
+
+
+
+--UC5- Ability to delete a person using person's name
+
+delete from AddressBook where FirstName='Akshay'
+
