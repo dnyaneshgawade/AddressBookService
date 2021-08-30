@@ -88,3 +88,14 @@ Update  AddressBook set TypeId=1 where FirstName='Saumya'
 
 select * from AddressBook 
 select * from AddressType
+
+
+
+
+
+--UC10-Ability to get number of contact persons i.e. count by type
+
+select Type, count(FirstName) as NoOfAddressBelongsToType from AddressBook 
+join AddressType 
+on AddressBook.TypeId=AddressType.TypeId
+group by Type
