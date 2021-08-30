@@ -28,3 +28,12 @@ values
 ('Dnyanesh','Gawade','pune','Pune','Maharashtra',411060,7878787878,'dnyanesh@gmail.com'),
 ('Saumya','Deshmukh','Mulund','Mumbai','Maharashtra',410006,9898989898,'Saumya@gmail.com'),
 ('Onkar','Kulkarni','Panjim','Panjim','Goa',100000,9999999999,'onkar@gmail.com')
+
+
+
+
+--UC4- Ability to edit existing contact person using their name
+
+Update  AddressBook
+set City='Wasco' where FirstName='Onkar'
+
