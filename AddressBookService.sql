@@ -65,3 +65,26 @@ select * from AddressBook where City='Mumbai' order by FirstName
 
 
 
+--UC9- Ability to identify each Address Book with name and Type.
+
+create table AddressType 
+(
+	TypeId int identity(1,1) not null primary key,
+	Type varchar(20) not null
+)
+
+insert into AddressType (Type)
+values 
+('Family'),
+('Friends'),
+('Profession')
+
+alter table AddressBook add TypeId int Foreign key references AddressType(TypeId)  
+
+Update  AddressBook set TypeId=1 where FirstName='Dnyanesh'
+Update  AddressBook set TypeId=2 where FirstName='Akshay'
+Update  AddressBook set TypeId=3 where FirstName='Onkar'
+Update  AddressBook set TypeId=1 where FirstName='Saumya'
+
+select * from AddressBook 
+select * from AddressType
