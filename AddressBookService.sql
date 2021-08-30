@@ -155,3 +155,38 @@ values
 
 
 
+
+
+--UC13- Ensure all retrieve queries done especially in UC 6, UC 7, UC 8 and UC 10 are working with new table structure
+
+Select * from ContactInfo
+Select * from ContactAddress
+Select * From AddressType
+
+update ContactAddress set Address='Wasco' where ContactId=4
+
+
+select City,count(FirstName) as  NoOfAddressBelongsToCity from ContactInfo i 
+join ContactAddress a 
+on i.ContactId=a.ContactId 
+join AddressType t 
+on i.TypeId=t.TypeId 
+group by City order by City
+
+
+select * from ContactInfo i 
+join ContactAddress a 
+on i.ContactId=a.ContactId 
+join AddressType t 
+on i.TypeId=t.TypeId 
+where City='Mumbai' order by a.ContactId
+
+
+
+select Type, count(FirstName) as NoOfAddressBelongsToType from ContactInfo i 
+join ContactAddress a 
+on i.ContactId=a.ContactId 
+join AddressType t 
+on i.TypeId=t.TypeId 
+group by Type
+
