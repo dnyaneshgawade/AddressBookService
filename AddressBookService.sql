@@ -50,3 +50,10 @@ delete from AddressBook where FirstName='Akshay'
 --UC6- Ability to Retrieve Person belonging to a City or State from the Address Book
 
 select * from AddressBook where City='Mumbai' or State='Maharashtra' order by FirstName
+
+
+
+--UC7-Ability to understand the size of address book by City and State
+
+select City,count(City) as NoOfAddressBelongsToCity from AddressBook group by City order by City
+
