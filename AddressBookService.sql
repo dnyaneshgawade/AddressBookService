@@ -18,3 +18,13 @@ create table AddressBook
 	PhoneNumber float not null,
 	Email varchar(50) not null
 )
+
+
+--UC3- Ability to insert new Contacts to Address Book
+
+Insert into AddressBook(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email)
+values
+('Akshay','Patil','Chennai','Chennai','Tamil Nadu',400000,9999900000,'Akshay@gmail.com'),
+('Dnyanesh','Gawade','pune','Pune','Maharashtra',411060,7878787878,'dnyanesh@gmail.com'),
+('Saumya','Deshmukh','Mulund','Mumbai','Maharashtra',410006,9898989898,'Saumya@gmail.com'),
+('Onkar','Kulkarni','Panjim','Panjim','Goa',100000,9999999999,'onkar@gmail.com')
