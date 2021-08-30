@@ -111,3 +111,47 @@ values
 
 
 
+
+--UC12- Draw the ER Diagram for Address Book Service DB
+
+create table ContactInfo
+(
+	ContactId int identity(1,1) primary key,
+	FirstName varchar(20) not null,
+	LastName varchar(20) not null,
+	PhoneNumber float not null,
+	Email varchar(50) not null,
+	TypeId int not null foreign key References AddressType(TypeId)
+)
+
+create table ContactAddress 
+(
+	ContactId int identity(1,1) foreign key References ContactInfo(ContactId),
+	Address varchar(20) not null,
+	City varchar(20) not null,
+	State varchar(20) not null,
+	Zip float not null
+)
+
+
+insert into ContactInfo (FirstName,LastName,PhoneNumber,Email,TypeId)
+values 
+('Akshay','Patil',9999900000,'Akshay@gmail.com',1),
+('Dnyanesh','Gawade',7878787878,'dnyanesh@gmail.com',2),
+('Saumya','Deshmukh',9898989898,'Saumya@gmail.com',3),
+('Onkar','Kulkarni',9999999999,'onkar@gmail.com',3),
+('Saurabh','Patil',9098989898,'saurabh@gmail.com',1),
+('Rutuja','Pai',9099999999,'rutuja@gmail.com',2)
+
+
+insert into ContactAddress(Address,City,State,Zip)
+values
+('Chennai','Chennai','Tamil Nadu',400000),
+('pune','Pune','Maharashtra',411060),
+('Mulund','Mumbai','Maharashtra',410006),
+('Panjim','Panjim','Goa',100000),
+('Magarpatta','Pune','Maharashtra',400011),
+('Thane','Mumbai','Maharashtra',400001)
+
+
+
