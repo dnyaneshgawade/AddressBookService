@@ -57,3 +57,11 @@ select * from AddressBook where City='Mumbai' or State='Maharashtra' order by Fi
 
 select City,count(City) as NoOfAddressBelongsToCity from AddressBook group by City order by City
 
+
+
+--UC8- Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+
+select * from AddressBook where City='Mumbai' order by FirstName
+
+
+
